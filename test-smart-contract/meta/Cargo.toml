@@ -1,0 +1,14 @@
+[package]
+name = "test-sc-meta"
+version = "0.0.0"
+edition = "2018"
+publish = false
+authors = [ "you",]
+
+[dev-dependencies]
+
+[dependencies.test-smart-contract]
+path = ".."
+
+[dependencies.multiversx-sc-meta]
+path = "../../../mx-sdk-rs/framework/meta"

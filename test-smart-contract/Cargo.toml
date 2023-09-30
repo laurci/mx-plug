@@ -1,0 +1,22 @@
+[package]
+name = "test-smart-contract"
+version = "0.0.0"
+authors = [ "you",]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/empty.rs"
+
+[dependencies]
+mx-plugin-demo = { path = "../plugin-demo/bridge" }
+
+[dev-dependencies]
+num-bigint = "0.4.2"
+
+[dependencies.multiversx-sc]
+version = "0.43.4"
+path = "../../mx-sdk-rs/framework/base"
+
+[dev-dependencies.multiversx-sc-scenario]
+path = "../../mx-sdk-rs/framework/scenario"

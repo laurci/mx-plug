@@ -1,0 +1,11 @@
+[package]
+name = "mx-plugin-demo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mx-plug-bridge = { path ="../../crates/bridge" }
+mx-plugin-demo-shared = { path = "../shared" }
+

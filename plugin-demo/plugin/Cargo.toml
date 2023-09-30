@@ -1,0 +1,17 @@
+[package]
+name = "mx-plugin-demo-impl"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+mx-plug-core = { path ="../../crates/core" }
+mx-plugin-demo-shared = { path = "../shared" }
+
+serde = { version = "1.0.*" }
+serde_json = { version = "1.0.*" }
+reqwest = { version = "0.11.20", features = ["blocking"] }
+

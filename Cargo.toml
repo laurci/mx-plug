@@ -1,0 +1,15 @@
+[workspace]
+members = [
+  "plugin-demo/bridge",
+  "plugin-demo/plugin",
+  "plugin-demo/shared",
+  "crates/bridge",
+  "crates/core",
+  "crates/meta",
+  "crates/shared"
+]
+
+exclude = [
+  "test-smart-contract",
+  "test-smart-contract/meta"
+]
