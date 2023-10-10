@@ -7,3 +7,5 @@ edition = "2021"
 
 [dependencies]
 mx-plug-shared = { path = "../shared" }
+base64 = "0.21.4"
+serde_json = "1.0.107"

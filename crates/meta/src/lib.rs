@@ -107,7 +107,7 @@ pub fn plugin(item: TokenStream) -> TokenStream {
             quote::quote! {
                 #func_str => {
                     let args = mx_plug_core::shared::serialization::decode_from_ptr(args);
-                    let result = #func(args);
+                    let result = #func(&call_ctx, args);
                     let result_ptr = mx_plug_core::shared::serialization::encode_to_ptr(&result);
 
                     result_ptr
@@ -128,8 +128,10 @@ pub fn plugin(item: TokenStream) -> TokenStream {
         }
 
         #[no_mangle]
-        pub extern "C" fn mx_plug_call(method_name: *const u8, args: *const u8) -> *const u8 {
+        pub extern "C" fn mx_plug_call(call_ctx: *const u8, method_name: *const u8, args: *const u8) -> *const u8 {
             let method_name = mx_plug_core::shared::serialization::ptr_to_string(method_name);
+            let call_ctx = mx_plug_core::shared::serialization::ptr_to_string(call_ctx);
+            let call_ctx = mx_plug_core::context::decode_plugin_context_from_str(&call_ctx);
 
             match method_name.as_str() {
                 #(#match_arms),*
