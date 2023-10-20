@@ -1,6 +1,8 @@
 # mx-plug
 
-This repository contains the framework for creating plugins for my fork of the MultiversX Blockchain VM. More information about it [here](https://github.com/laurci/mx-unit).
+This repository contains the framework for creating plugins for my fork of the MultiversX Blockchain VM.
+
+Learn more about this repository [here](https://laurci.notion.site/XDay-Hackathon-Log-087f6778a60245f58a4e0d9e2bea3b95?pvs=4).
 
 Each plugin is split in 2 parts:
 
